@@ -1,4 +1,4 @@
-package com.rhjensen.osgi.sample.service.one.one.api;
+package com.rhjensen.osgi.sample.service.one.api;
 
 import org.junit.Test;
 

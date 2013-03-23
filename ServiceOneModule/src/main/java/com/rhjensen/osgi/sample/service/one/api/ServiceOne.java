@@ -1,4 +1,4 @@
-package com.rhjensen.osgi.sample.service.one.one.api;
+package com.rhjensen.osgi.sample.service.one.api;
 
 /**
  * Created with IntelliJ IDEA.
