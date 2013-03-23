@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de220ace-fc2d-49bc-ad19-611fecd72ad5" name="Default" comment="" />
+    <list default="true" id="de220ace-fc2d-49bc-ad19-611fecd72ad5" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServiceOneModule/src/main/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOne.java" afterPath="$PROJECT_DIR$/ServiceOneModule/src/main/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOne.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServiceOneModule/src/test/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOneTest.java" afterPath="$PROJECT_DIR$/ServiceOneModule/src/test/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOneTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="OsgiTesting.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ServiceOneTest.java" changelist="de220ace-fc2d-49bc-ad19-611fecd72ad5" time="1364065843550" ignored="false" />
     <file path="/pom.xml" changelist="de220ace-fc2d-49bc-ad19-611fecd72ad5" time="1364065544634" ignored="false" />
-    <file path="/fragment.java" changelist="de220ace-fc2d-49bc-ad19-611fecd72ad5" time="1364065775601" ignored="false" />
+    <file path="/fragment.java" changelist="de220ace-fc2d-49bc-ad19-611fecd72ad5" time="1364066666462" ignored="false" />
     <file path="/ServiceOne.java" changelist="de220ace-fc2d-49bc-ad19-611fecd72ad5" time="1364065817338" ignored="false" />
+    <file path="/Dummy.txt" changelist="de220ace-fc2d-49bc-ad19-611fecd72ad5" time="1364066398963" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,9 +92,9 @@
         </entry>
       </file>
       <file leaf-file-name="ServiceOneTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/test/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOneTest.java">
+        <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/test/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOneTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="438" selection-end="438" vertical-scroll-proportion="0.45535713">
+            <state line="9" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.24107143">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,9 +103,9 @@
         </entry>
       </file>
       <file leaf-file-name="ServiceOne.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/main/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOne.java">
+        <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/main/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOne.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="8" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+            <state line="11" column="8" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,6 +118,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -118,6 +133,7 @@
         <option value="$PROJECT_DIR$/ServiceOneModule/pom.xml" />
         <option value="$PROJECT_DIR$/ServiceOneModule/src/main/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOne.java" />
         <option value="$PROJECT_DIR$/ServiceOneModule/src/test/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOneTest.java" />
+        <option value="$PROJECT_DIR$/ServiceOneModule/src/test/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOneTest.java" />
       </list>
     </option>
   </component>
@@ -127,7 +143,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1040" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -274,37 +290,44 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.swacorp.dotcom.sample.osgi.service.one.api" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.rhjensen.osgi.sample.service.one" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ServiceOneTest.shouldGiveHelloWorld">
     <configuration default="false" name="ServiceOneTest.shouldGiveHelloWorld" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.swacorp.dotcom.sample.osgi.service.one.api.*" />
+          <option name="PATTERN" value="com.rhjensen.osgi.sample.service.one.one.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="ServiceOneModule" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.swacorp.dotcom.sample.osgi.service.one.api" />
-      <option name="MAIN_CLASS_NAME" value="com.swacorp.dotcom.sample.osgi.service.one.api.ServiceOneTest" />
+      <option name="PACKAGE_NAME" value="com.rhjensen.osgi.sample.service.one.one.api" />
+      <option name="MAIN_CLASS_NAME" value="com.rhjensen.osgi.sample.service.one.one.api.ServiceOneTest" />
       <option name="METHOD_NAME" value="shouldGiveHelloWorld" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -426,6 +449,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="de220ace-fc2d-49bc-ad19-611fecd72ad5" name="Default" comment="" />
@@ -538,16 +579,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/main/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOne.java">
+    <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/main/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOne.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+        <state line="11" column="8" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/test/java/com/swacorp/dotcom/sample/osgi/service/one/api/ServiceOneTest.java">
+    <entry file="file://$PROJECT_DIR$/ServiceOneModule/src/test/java/com/rhjensen/osgi/sample/service/one/one/api/ServiceOneTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="438" selection-end="438" vertical-scroll-proportion="0.45535713">
+        <state line="9" column="28" selection-start="241" selection-end="241" vertical-scroll-proportion="0.24107143">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -619,6 +660,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: org.ops4j.pax:exam:2.6.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
