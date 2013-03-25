@@ -9,10 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ServiceOneModule</artifactId>
-    <packaging>bundle</packaging>
+    <artifactId>OsgiBundleTests</artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+       <exam.version>2.6.0</exam.version>
+       <url.version>1.5.0</url.version>
+    </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>OsgiTesting</groupId>
+            <artifactId>ServiceOneModule</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -22,6 +32,32 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-library</artifactId>
             <version>1.3</version>
+        </dependency>
+<!-- Dependencies from: http://www.javabeat.net/2011/11/how-to-test-osgi-applications/ -->
+<!-- and https://ops4j1.jira.com/wiki/display/paxexam/Pax+Exam+Maven+Dependencies -->
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-container-native</artifactId>
+            <version>${exam.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-junit4</artifactId>
+            <version>${exam.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.url</groupId>
+            <artifactId>pax-url-aether</artifactId>
+            <version>${url.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-link-mvn</artifactId>
+            <version>${exam.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
@@ -41,25 +77,4 @@
             <version>1.6.1</version>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-Version>1.0.0</Bundle-Version>
-                        <Private-Package>com.rhjensen.osgi.sample.service.one.impl</Private-Package>
-                        <Bundle-Activator>com.rhjensen.osgi.sample.service.one.impl.ServiceOneActivator</Bundle-Activator>
-                        <Export-Package>com.rhjensen.osgi.sample.service.one.api.*</Export-Package>
-                        <Export-Service>com.rhjensen.osgi.sample.service.one.api.ServiceOne</Export-Service>
-                    </instructions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

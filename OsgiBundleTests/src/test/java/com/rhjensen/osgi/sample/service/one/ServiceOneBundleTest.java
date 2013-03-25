@@ -1,9 +1,11 @@
 package com.rhjensen.osgi.sample.service.one;
 
 import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
 import com.rhjensen.osgi.sample.service.one.api.ServiceOne;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.ops4j.pax.exam.CoreOptions;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.Configuration;
 import org.ops4j.pax.exam.junit.JUnit4TestRunner;
@@ -15,7 +17,6 @@ import javax.inject.Inject;
 import java.io.File;
 import java.util.Arrays;
 
-import static com.google.common.collect.Iterables.any;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.ops4j.pax.exam.CoreOptions.*;
@@ -30,17 +31,20 @@ public class ServiceOneBundleTest {
         // Had an error saying no method found related to the google collections stuff,
         // and found a StackOverflow entry
         // http://stackoverflow.com/questions/15067691/osgi-integration-testing-pax-exam-probe-executing-tests-before-container-bundle
-        return options(
+        String pathToTestClass = ServiceOneBundleTest.class.getClassLoader().getResource(".").getPath();
+        String[] pathParts = pathToTestClass.split("OsgiBundleTest");
+        StringBuilder pathToBundle = new StringBuilder(pathParts[0]);
+        pathToBundle.append("ServiceOneModule/target/ServiceOneModule-1.0-SNAPSHOT.jar");
+        return CoreOptions.options(
                 mavenBundle("com.google.guava", "guava", "13.0.1").startLevel(30),
-//                mavenBundle("org.hamcrest", "hamcrest-library", "1.3").startLevel(30),
-                bundle(new File("./ServiceOneModule/target/ServiceOneModule-1.0-SNAPSHOT.jar").toURI().toString()),
+                bundle(new File(pathToBundle.toString()).toURI().toString()),
                 junitBundles()
         );
     }
 
     @Test
     public void shouldLoadServiceOneBundle() {
-        boolean found = any(Arrays.asList(bc.getBundles()), new Predicate<Bundle>() {
+        boolean found = Iterables.any(Arrays.asList(bc.getBundles()), new Predicate<Bundle>() {
 
             @Override
             public boolean apply(Bundle bundle) {
