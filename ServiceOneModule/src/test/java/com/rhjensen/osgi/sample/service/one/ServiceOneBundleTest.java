@@ -16,9 +16,7 @@ import java.io.File;
 import java.util.Arrays;
 
 import static com.google.common.collect.Iterables.any;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.ops4j.pax.exam.CoreOptions.*;
 
@@ -34,7 +32,7 @@ public class ServiceOneBundleTest {
         // http://stackoverflow.com/questions/15067691/osgi-integration-testing-pax-exam-probe-executing-tests-before-container-bundle
         return options(
                 mavenBundle("com.google.guava", "guava", "13.0.1").startLevel(30),
-                mavenBundle("org.hamcrest","hamcrest-all", "1.3").startLevel(30),
+//                mavenBundle("org.hamcrest", "hamcrest-library", "1.3").startLevel(30),
                 bundle(new File("./ServiceOneModule/target/ServiceOneModule-1.0-SNAPSHOT.jar").toURI().toString()),
                 junitBundles()
         );
@@ -60,8 +58,8 @@ public class ServiceOneBundleTest {
         if (serviceReference != null) {
             myService = bc.getService(serviceReference);
         }
-        assertThat(myService, notNullValue());
-        assertThat(myService.greeting(), is("Hello World!"));
+        assertNotNull("Did not find ServiceOne", myService);
+        assertTrue("Hello World!".equals(myService.greeting()));
     }
 
 }
