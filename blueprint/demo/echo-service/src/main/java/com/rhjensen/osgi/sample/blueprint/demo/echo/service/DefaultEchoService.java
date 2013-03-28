@@ -21,10 +21,17 @@ public class DefaultEchoService implements EchoService {
 
     @Override
     public void initialize() {
+        if (outputStream == null) {
+            outputStream = System.out;
+        }
         outputStream.println(this.getClass().getName() + " is initialized.");
     }
 
     public void setOutputStream(PrintStream outputStream) {
         this.outputStream = outputStream;
+    }
+
+    public PrintStream getOutputStream() {
+        return outputStream;
     }
 }

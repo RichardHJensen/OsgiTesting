@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <reference id="echoservice"
+               interface="com.rhjensen.osgi.sample.blueprint.demo.echo.api.EchoService"/>
+
+    <bean id="echoclient" class="com.rhjensen.osgi.sample.blueprint.demo.echo.client.EchoServiceClient"
+          init-method="initialize">
+        <property name="service" ref="echoservice"/>
+    </bean>
+
+</blueprint>

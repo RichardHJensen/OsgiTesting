@@ -1,5 +1,6 @@
 package com.rhjensen.osgi.sample.blueprint.demo.echo.service;
 
+import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -7,6 +8,8 @@ import org.mockito.ArgumentCaptor;
 import java.io.PrintStream;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.*;
 
@@ -39,5 +42,13 @@ public class DefaultEchoServiceTest {
     public void shouldWriteAMessageWhenInitializing() {
         service.initialize();
         verify(mockOutput, times(1)).println(anyString());
+    }
+
+    @Test
+    public void shouldSetOutputToSystemOutIfNotSetBeforeInitialize() {
+        service = new DefaultEchoService();
+        service.initialize();
+        assertThat(service.getOutputStream(), notNullValue());
+        assertThat(service.getOutputStream(), sameInstance(System.out));
     }
 }
